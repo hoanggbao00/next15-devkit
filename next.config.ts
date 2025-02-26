@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	experimental: {
-		reactCompiler: true,
-	},
+  experimental: {
+    reactCompiler: true,
+  },
   eslint: {
-    ignoreDuringBuilds: true
-  }
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

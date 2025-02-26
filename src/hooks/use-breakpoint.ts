@@ -9,7 +9,9 @@ const MOBILE_BREAKPOINT = 768;
  * @default 768 - for mobile Breakpoint
  */
 export function useIsBreakpoint(breakpoint = MOBILE_BREAKPOINT) {
-  const [isBreakpoint, setIsBreakpoint] = useState<boolean | undefined>(undefined);
+  const [isBreakpoint, setIsBreakpoint] = useState<boolean | undefined>(
+    undefined,
+  );
 
   useEffect(() => {
     const mql = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);

@@ -10,15 +10,19 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
       effect: {
         expandIcon: "group gap-0 relative",
-        ringHover: "transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2",
+        ringHover:
+          "transition-all duration-300 hover:ring-2 hover:ring-primary/90 hover:ring-offset-2",
         shine:
           "before:animate-shine relative overflow-hidden before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-no-repeat background-position_0s_ease",
         shineHover:
@@ -64,9 +68,23 @@ export interface ButtonProps
 
 export type ButtonIconProps = IconProps | IconRefProps;
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps & ButtonIconProps & { loading?: boolean }>(
+const Button = forwardRef<
+  HTMLButtonElement,
+  ButtonProps & ButtonIconProps & { loading?: boolean }
+>(
   (
-    { className, variant, effect, size, icon: Icon, iconPlacement, asChild = false, loading, disabled, ...props },
+    {
+      className,
+      variant,
+      effect,
+      size,
+      icon: Icon,
+      iconPlacement,
+      asChild = false,
+      loading,
+      disabled,
+      ...props
+    },
     ref,
   ) => {
     const Comp = asChild ? Slot : "button";

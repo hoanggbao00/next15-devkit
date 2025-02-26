@@ -3,6 +3,7 @@
 This is a **boilerplate project** designed to provide a solid foundation for building modern web applications with **Next.js 15** and **React 19**. It comes with essential integrations, including **Shadcn v4**, **Tailwind v4**, and **React Query**, optimized for performance and developer experience.
 
 ---
+<br>
 
 ## 🚀 Features
 
@@ -21,8 +22,10 @@ This is a **boilerplate project** designed to provide a solid foundation for bui
 - **Sonner Shadcn for Toaster Notifications**
 - **404 Page with SVG**
 - **Landing Page with Shadcn Blocks**
+- **Header with 2 styles**:
+  - Breadcrumb (`/app`)
+  - Search with command palette (`/app?flags=header2`)
 
----
 
 ## 🔧 How to Use
 
@@ -38,12 +41,12 @@ This is a **boilerplate project** designed to provide a solid foundation for bui
 
 3. **Install Dependencies**
    ```sh
-   pnpm install
+   bun install
    ```
 
 4. **Start the Development Server**
    ```sh
-   pnpm dev
+   bun dev
    ```
 
 ---
@@ -52,32 +55,37 @@ This is a **boilerplate project** designed to provide a solid foundation for bui
 
 1. **Install Dependencies**
    ```sh
-   pnpm install
+   bun install
    ```
 
 2. **Run Development Server**
    ```sh
-   pnpm dev
+   bun dev
    ```
 
-3. **Check Linting & Formatting**
+3. **Check Linting**
    ```sh
-   pnpm check
+   bun check
    ```
 
-4. **Build Project**
+4. **Format Code**
    ```sh
-   pnpm build
+   bun format
    ```
 
-5. **Start Built Project**
+5. **Build Project**
    ```sh
-   pnpm start
+   bun build
    ```
 
-6. **Add Shadcn Component**
+6. **Start Built Project**
    ```sh
-   pnpm shadcn [component-name] [component-name] ...
+   bun start
+   ```
+
+7. **Add Shadcn Component**
+   ```sh
+   bun shadcn [component-name] [component-name] ...
    ```
 
 ---

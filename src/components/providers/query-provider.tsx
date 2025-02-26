@@ -5,7 +5,9 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ReactQueryStreamedHydration } from "@tanstack/react-query-next-experimental";
 import { useState } from "react";
 
-export function QueryProvider({ children }: React.ComponentProps<typeof QueryClientProvider>) {
+export function QueryProvider({
+  children,
+}: React.ComponentProps<typeof QueryClientProvider>) {
   const [queryClient] = useState(
     () =>
       new QueryClient({

@@ -2,11 +2,16 @@
 
 import { Laptop, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "./button";
-import { useSidebar } from "./sidebar";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
+import { Button } from "../../ui/button";
+import { useSidebar } from "../../ui/sidebar";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../../ui/tooltip";
 
-function ThemeSwitcher() {
+function ThemeSwitcherSidebar() {
   const { theme, setTheme } = useTheme();
   const { isMobile, open } = useSidebar();
 
@@ -34,7 +39,9 @@ function ThemeSwitcher() {
             variant="outline"
             size={open ? "default" : "icon"}
             onClick={handleChangeTheme}
-            className={!open && !isMobile ? "size-8" : "w-full justify-start px-2"}
+            className={
+              !open && !isMobile ? "size-8" : "w-full justify-start px-2"
+            }
           >
             {theme === "system" && <Laptop className="size-4" />}
             {theme === "light" && <Sun className="size-4" />}
@@ -48,10 +55,12 @@ function ThemeSwitcher() {
             )}
           </Button>
         </TooltipTrigger>
-        <TooltipContent side={open ? "top" : "right"}>Toggle Theme</TooltipContent>
+        <TooltipContent side={open ? "top" : "right"}>
+          Toggle Theme
+        </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
 }
 
-export default ThemeSwitcher;
+export default ThemeSwitcherSidebar;

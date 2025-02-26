@@ -4,7 +4,10 @@ import type { IconProps } from ".";
 export const NotFound = ({ className, ...props }: IconProps) => {
   return (
     <svg
-      className={cn("w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white", className)}
+      className={cn(
+        "w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white",
+        className,
+      )}
       aria-hidden="true"
       width="426"
       height="211"

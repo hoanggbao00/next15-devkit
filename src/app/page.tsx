@@ -16,9 +16,18 @@ const data = {
     role: "CEO",
     company: "Company",
     avatars: [
-      { image: "https://shadcnblocks.com/images/block/avatar-1.webp", fallback: "AB" },
-      { image: "https://shadcnblocks.com/images/block/avatar-2.webp", fallback: "CD" },
-      { image: "https://shadcnblocks.com/images/block/avatar-3.webp", fallback: "EF" },
+      {
+        image: "https://shadcnblocks.com/images/block/avatar-1.webp",
+        fallback: "AB",
+      },
+      {
+        image: "https://shadcnblocks.com/images/block/avatar-2.webp",
+        fallback: "CD",
+      },
+      {
+        image: "https://shadcnblocks.com/images/block/avatar-3.webp",
+        fallback: "EF",
+      },
     ],
   },
   images: {
@@ -39,7 +48,9 @@ const HomePage = () => {
               <h1 className="max-w-[80%] text-4xl font-semibold leading-tight text-foreground lg:text-5xl xl:text-7xl">
                 {data.heading}
               </h1>
-              <p className="text-lg leading-relaxed text-muted-foreground xl:text-2xl">{data.description}</p>
+              <p className="text-lg leading-relaxed text-muted-foreground xl:text-2xl">
+                {data.description}
+              </p>
             </div>
             <div className="my-6 lg:my-10">
               <Button asChild size="lg">
@@ -59,9 +70,12 @@ const HomePage = () => {
                 ))}
               </div>
               <div>
-                <p className="mb-1 text-sm italic text-muted2-foreground">&quot;{data.testimonial.quote}&quot;</p>
+                <p className="mb-1 text-sm italic text-muted2-foreground">
+                  &quot;{data.testimonial.quote}&quot;
+                </p>
                 <p className="text-sm font-medium text-muted2-foreground">
-                  {data.testimonial.author}, {data.testimonial.role} @{data.testimonial.company}
+                  {data.testimonial.author}, {data.testimonial.role} @
+                  {data.testimonial.company}
                 </p>
               </div>
             </div>
@@ -71,19 +85,31 @@ const HomePage = () => {
               <AspectRatio ratio={1 / 1} className="h-full w-full">
                 <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-[3.5%]">
                   <div className="overflow-hidden rounded-[5.2%] border border-muted bg-muted">
-                    <img src={data.images.first} alt="" className="object-fit h-full w-full object-center" />
+                    <img
+                      src={data.images.first}
+                      alt=""
+                      className="object-fit h-full w-full object-center"
+                    />
                   </div>
                   <div className="relative overflow-hidden rounded-[5.2%] border border-muted bg-muted">
                     <div className="absolute left-[5%] top-1/2 w-[110%] max-w-[25rem] -translate-y-1/2 overflow-hidden rounded-md">
                       <AspectRatio ratio={1.739130435 / 1}>
-                        <img src={data.images.second} alt="" className="size-full object-cover object-center" />
+                        <img
+                          src={data.images.second}
+                          alt=""
+                          className="size-full object-cover object-center"
+                        />
                       </AspectRatio>
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-[5.2%] border border-muted bg-muted">
                     <div className="absolute left-[9%] top-[9%] w-[200%] max-w-[37.5rem] overflow-hidden rounded-md">
                       <AspectRatio ratio={1.6 / 1}>
-                        <img src={data.images.third} alt="" className="size-full object-cover object-center" />
+                        <img
+                          src={data.images.third}
+                          alt=""
+                          className="size-full object-cover object-center"
+                        />
                       </AspectRatio>
                     </div>
                   </div>
@@ -95,7 +121,11 @@ const HomePage = () => {
                           alt=""
                           className="absolute z-20 w-full"
                         />
-                        <img src={data.images.fourth} alt="" className="absolute z-10 w-full rounded-[16%]" />
+                        <img
+                          src={data.images.fourth}
+                          alt=""
+                          className="absolute z-10 w-full rounded-[16%]"
+                        />
                       </AspectRatio>
                     </div>
                   </div>

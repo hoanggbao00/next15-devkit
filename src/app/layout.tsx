@@ -27,9 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {process.env.NODE_ENV === "development" && <Script src="https://unpkg.com/react-scan/dist/auto.global.js" />}
+      {process.env.NODE_ENV === "development" && (
+        <Script src="https://unpkg.com/react-scan/dist/auto.global.js" />
+      )}
       <body className={`${inter.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
           <NextTopLoader />
           <Toaster closeButton richColors position="top-right" />
