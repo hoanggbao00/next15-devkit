@@ -2,6 +2,8 @@
 
 This is a **boilerplate project** designed to provide a solid foundation for building modern web applications with **Next.js 15** and **React 19**. It comes with essential integrations, including **Shadcn v4**, **Tailwind v4**, and **React Query**, optimized for performance and developer experience.
 
+References:
+- [https://github.com/satnaing/shadcn-admin](https://github.com/satnaing/shadcn-admin)
 ---
 <br>
 

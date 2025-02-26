@@ -31,7 +31,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
   }, [isLaptop]);
 
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" variant="floating" {...props}>
       <SidebarHeader>
         <TeamSwitcher />
       </SidebarHeader>

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { IconProps } from ".";
 
-export const NotFound = ({ className, ...props }: IconProps) => {
+export const NotFoundSvg = ({ className, ...props }: IconProps) => {
   return (
     <svg
       className={cn(

@@ -76,7 +76,7 @@ export default function AlertCard() {
       <CardContent className="space-y-4">
         <div className="space-y-2">
           <h3>Confirm</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button onClick={() => handleConfirm(false)}>Confirm</Button>
             <Button onClick={() => handleConfirm(true)}>
               Confirm (with Promise)
@@ -85,13 +85,13 @@ export default function AlertCard() {
         </div>
         <div className="space-y-2">
           <h3>Alert</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button onClick={() => handleAlert()}>Alert</Button>
           </div>
         </div>
         <div className="space-y-2">
           <h3>Prompt</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button onClick={() => handlePrompt(false)}>Prompt</Button>
             <Button onClick={() => handlePrompt(true)}>
               Prompt (with Promise)

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,9 +10,12 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 export default function HeaderWithBreadcrumb() {
   const breadcrumb = undefined;
+  const [offset, setOffset] = useState(0);
 
   const currentApp = {
     name: "Building Your Application",
@@ -22,9 +27,26 @@ export default function HeaderWithBreadcrumb() {
     link: "/data-fetching",
   };
 
+  useEffect(() => {
+    const onScroll = () => {
+      setOffset(document.body.scrollTop || document.documentElement.scrollTop);
+    };
+
+    // Add scroll listener to the body
+    document.addEventListener("scroll", onScroll, { passive: true });
+
+    // Clean up the event listener on unmount
+    return () => document.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="flex h-16 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 sticky top-0 z-10">
-      <div className="flex items-center gap-2 px-4">
+    <header
+      className={cn(
+        "flex h-16 items-center gap-2 transition-[height] sticky top-0 z-10 p-4 bg-background rounded-md group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12",
+        offset > 10 ? "shadow" : "shadow-none",
+      )}
+    >
+      <div className="flex items-center gap-2">
         <SidebarTrigger className="-ml-1" />
         <Separator orientation="vertical" className="mr-2 h-4" />
         <Breadcrumb>

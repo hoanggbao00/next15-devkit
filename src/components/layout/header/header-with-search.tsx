@@ -27,7 +27,7 @@ export default function HeaderWithSearch() {
     <SearchProvider>
       <header
         className={cn(
-          "flex h-16 items-center gap-2 transition-[height] group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 sticky top-0 z-10 p-4",
+          "flex h-16 items-center gap-2 transition-[height] sticky top-0 z-10 p-4 bg-background rounded-md group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12",
           offset > 10 ? "shadow" : "shadow-none",
         )}
       >

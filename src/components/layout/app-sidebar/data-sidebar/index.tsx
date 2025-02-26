@@ -45,27 +45,27 @@ export const dataSidebar: DataSidebar[] = [
         items: [
           {
             title: "Unauthorized",
-            url: "/401",
+            url: "/pages/401",
             icon: LockIcon,
           },
           {
             title: "Forbidden",
-            url: "/403",
+            url: "/pages/403",
             icon: UserXIcon,
           },
           {
             title: "Not Found",
-            url: "/404",
+            url: "/pages/404",
             icon: CloudAlertIcon,
           },
           {
             title: "Internal Server Error",
-            url: "/500",
+            url: "/pages/500",
             icon: ServerCrashIcon,
           },
           {
             title: "Maintenance Error",
-            url: "/503",
+            url: "/pages/503",
             icon: ConstructionIcon,
           },
         ],

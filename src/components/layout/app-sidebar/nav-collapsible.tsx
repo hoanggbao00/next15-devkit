@@ -64,6 +64,7 @@ function CollapsibleSidebarItem({
                     onClick={handleClick}
                     prefetch={false}
                   >
+                    {subItem.icon && <subItem.icon />}
                     <span>{subItem.title}</span>
                   </Link>
                 </SidebarMenuSubButton>

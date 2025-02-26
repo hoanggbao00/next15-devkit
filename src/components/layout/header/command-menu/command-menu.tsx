@@ -32,47 +32,36 @@ export function CommandMenu() {
       <CommandList>
         <ScrollArea type="hover" className="h-72 pr-1">
           <CommandEmpty>No results found.</CommandEmpty>
-          {dataSidebar.map((group) =>
-            group.items ? (
-              <CommandGroup key={group.title} heading={group.title}>
-                {group.items?.map((navItem, i) => {
-                  if (navItem.url)
-                    return (
-                      <CommandItem
-                        key={`${navItem.url}-${i}`}
-                        value={`${group.title} ${navItem.title}`}
-                        onSelect={() => router.push(navItem.url)}
-                        className="capitalize"
-                      >
-                        {/* {navItem.icon && <navItem.icon />} */}
-                        {navItem.title}
-                      </CommandItem>
-                    );
-
-                  return navItem.items?.map((subItem, i) => (
+          {dataSidebar.map((group) => (
+            <CommandGroup key={group.group} heading={group.group}>
+              {group.items?.map((navItem, i) => {
+                if (navItem.url)
+                  return (
                     <CommandItem
-                      key={`${subItem.url}-${i}`}
-                      value={subItem.title}
-                      onSelect={() => router.push(subItem.url)}
+                      key={`${navItem.url}-${i}`}
+                      value={`${group.group} ${navItem.title}`}
+                      onSelect={() => router.push(navItem.url)}
+                      className="capitalize"
                     >
-                      {/* {subItem.icon && <subItem.icon />} */}
-                      {subItem.title}
+                      {navItem.icon && <navItem.icon />}
+                      {navItem.title}
                     </CommandItem>
-                  ));
-                })}
-              </CommandGroup>
-            ) : (
-              <CommandGroup key={group.title}>
-                <CommandItem
-                  value={group.title}
-                  onSelect={() => router.push(group.url)}
-                >
-                  {/* {group.icon && <group.icon />} */}
-                  {group.title}
-                </CommandItem>
-              </CommandGroup>
-            ),
-          )}
+                  );
+
+                return navItem.items?.map((subItem, i) => (
+                  <CommandItem
+                    key={`${subItem.url}-${i}`}
+                    value={subItem.title}
+                    onSelect={() => router.push(subItem.url)}
+                  >
+                    {subItem.icon && <subItem.icon />}
+                    {subItem.title}
+                  </CommandItem>
+                ));
+              })}
+            </CommandGroup>
+          ))}
+
           <CommandSeparator />
           <CommandThemeGroup runCommand={runCommand} />
           <CommandSeparator />

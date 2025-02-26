@@ -21,7 +21,7 @@ export default function InputCard() {
       <CardContent className="space-y-4">
         <div className="space-y-2">
           <h3>Icons</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-col md:flex-row">
             <Input startIcon={SearchIcon} placeholder="Start Icon" />
             <Input endIcon={SearchIcon} placeholder="End Icon" />
           </div>

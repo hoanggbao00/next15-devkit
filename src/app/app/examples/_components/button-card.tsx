@@ -22,7 +22,7 @@ export default function ButtonCard() {
       <CardContent className="space-y-4">
         <div className="space-y-2">
           <h3>Variants</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button>Default</Button>
             <Button variant="outline">Outline</Button>
             <Button variant="secondary">Secondary</Button>
@@ -32,7 +32,7 @@ export default function ButtonCard() {
         </div>
         <div className="space-y-2">
           <h3>Sizes</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button size="lg">Large</Button>
             <Button size="default">Default</Button>
             <Button size="sm">Small</Button>
@@ -41,7 +41,7 @@ export default function ButtonCard() {
         </div>
         <div className="space-y-2">
           <h3>Icons</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button icon={Plus} iconPlacement="left">
               Icon Left
             </Button>
@@ -52,7 +52,7 @@ export default function ButtonCard() {
         </div>
         <div className="space-y-2">
           <h3>Loading State</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button loading>Loading without Icon</Button>
             <Button variant="outline" loading>
               Outline
