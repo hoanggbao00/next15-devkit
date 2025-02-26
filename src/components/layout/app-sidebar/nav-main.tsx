@@ -2,6 +2,7 @@
 
 import {
   SidebarGroup,
+  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -20,10 +21,12 @@ export function NavMain() {
   const handleClick = () => {
     if (isMobile) setOpenMobile(false);
   };
-  return (
-    <SidebarGroup>
+
+  return dataSidebar.map((item) => (
+    <SidebarGroup key={item.group}>
+      <SidebarGroupLabel>{item.group}</SidebarGroupLabel>
       <SidebarMenu>
-        {dataSidebar.map((item) =>
+        {item.items.map((item) =>
           item.items ? (
             <CollapsibleSidebarItem key={item.title} sidebarItem={item} />
           ) : (
@@ -31,7 +34,10 @@ export function NavMain() {
               <SidebarMenuButton
                 tooltip={item.title}
                 asChild
-                className={cn(pathname === item.url && "bg-primary/10")}
+                className={cn(
+                  pathname === item.url &&
+                    "bg-primary/5 font-semibold text-primary",
+                )}
               >
                 <Link href={item.url} onClick={handleClick} prefetch={false}>
                   {item.icon && <item.icon />}
@@ -43,5 +49,5 @@ export function NavMain() {
         )}
       </SidebarMenu>
     </SidebarGroup>
-  );
+  ));
 }

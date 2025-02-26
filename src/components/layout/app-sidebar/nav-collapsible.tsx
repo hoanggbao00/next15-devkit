@@ -25,9 +25,11 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function CollapsibleSidebarItem({ sidebarItem }: { sidebarItem: DataSidebar }) {
+function CollapsibleSidebarItem({
+  sidebarItem,
+}: { sidebarItem: DataSidebar["items"][number] }) {
   const pathname = usePathname();
-  const isActive = pathname.includes(sidebarItem.url);
+  const isActive = sidebarItem.url ? pathname.includes(sidebarItem.url) : false;
   const { isMobile, setOpenMobile, state } = useSidebar();
 
   const handleClick = () => {
@@ -46,7 +48,7 @@ function CollapsibleSidebarItem({ sidebarItem }: { sidebarItem: DataSidebar }) {
           <SidebarMenuButton tooltip={sidebarItem.title}>
             {sidebarItem.icon && <sidebarItem.icon />}
             <span>{sidebarItem.title}</span>
-            <ChevronDown className="ml-auto size-4 group/collapsible-data-[state=open]:rotate-180" />
+            <ChevronDown className="ml-auto size-4 transition-transform duration-200 group/collapsible-data-[state=open]:rotate-180" />
           </SidebarMenuButton>
         </CollapsibleTrigger>
         <CollapsibleContent>

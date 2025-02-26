@@ -1,6 +1,23 @@
-export interface DataSidebar {
+export interface DataSidebarItemBase {
   title: string;
-  url: string;
   icon?: React.ElementType;
-  items?: DataSidebar[];
+}
+
+export type DataSidebarItemNoSubMenu = DataSidebarItemBase & {
+  url: string;
+  items?: undefined;
+};
+
+export type DataSidebarItemWithSubMenu = DataSidebarItemBase & {
+  url?: undefined;
+  items: DataSidebarItemNoSubMenu[];
+};
+
+export type DataSidebarItem =
+  | DataSidebarItemNoSubMenu
+  | DataSidebarItemWithSubMenu;
+
+export interface DataSidebar {
+  group: string;
+  items: DataSidebarItem[];
 }

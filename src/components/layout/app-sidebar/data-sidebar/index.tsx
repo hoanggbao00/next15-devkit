@@ -1,12 +1,14 @@
 import type { DataSidebar } from "@/types/app-sidebar";
 import {
-  BookOpen,
-  Bot,
+  BugIcon,
   ChartPieIcon,
-  CircleAlertIcon,
+  CloudAlertIcon,
+  ConstructionIcon,
   GalleryVerticalEnd,
-  Settings2,
-  Star,
+  LockIcon,
+  ServerCrashIcon,
+  UserIcon,
+  UserXIcon,
 } from "lucide-react";
 
 export const dataUser = {
@@ -25,82 +27,59 @@ export const dataTeams = [
 
 export const dataSidebar: DataSidebar[] = [
   {
-    title: "Examples",
-    url: "/app/examples",
-    icon: ChartPieIcon,
-  },
-  {
-    title: "404",
-    url: "/app/404",
-    icon: CircleAlertIcon,
-  },
-  {
-    title: "Starred",
-    url: "#",
-    icon: Star,
-  },
-  {
-    title: "Models",
-    url: "#",
-    icon: Bot,
+    group: "General",
     items: [
       {
-        title: "Genesis",
-        url: "#",
-      },
-      {
-        title: "Explorer",
-        url: "#",
-      },
-      {
-        title: "Quantum",
-        url: "#",
+        title: "Examples",
+        url: "/app/examples",
+        icon: ChartPieIcon,
       },
     ],
   },
   {
-    title: "Documentation",
-    url: "#",
-    icon: BookOpen,
+    group: "Pages",
     items: [
       {
-        title: "Introduction",
-        url: "#",
+        title: "Errors",
+        icon: BugIcon,
+        items: [
+          {
+            title: "Unauthorized",
+            url: "/401",
+            icon: LockIcon,
+          },
+          {
+            title: "Forbidden",
+            url: "/403",
+            icon: UserXIcon,
+          },
+          {
+            title: "Not Found",
+            url: "/404",
+            icon: CloudAlertIcon,
+          },
+          {
+            title: "Internal Server Error",
+            url: "/500",
+            icon: ServerCrashIcon,
+          },
+          {
+            title: "Maintenance Error",
+            url: "/503",
+            icon: ConstructionIcon,
+          },
+        ],
       },
       {
-        title: "Get Started",
-        url: "#",
-      },
-      {
-        title: "Tutorials",
-        url: "#",
-      },
-      {
-        title: "Changelog",
-        url: "#",
-      },
-    ],
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings2,
-    items: [
-      {
-        title: "General",
-        url: "#",
-      },
-      {
-        title: "Team",
-        url: "#",
-      },
-      {
-        title: "Billing",
-        url: "#",
-      },
-      {
-        title: "Limits",
-        url: "#",
+        title: "Auth",
+        icon: UserIcon,
+        items: [
+          {
+            title: "Login",
+            icon: LockIcon,
+            url: "/app/auth/login",
+          },
+        ],
       },
     ],
   },
