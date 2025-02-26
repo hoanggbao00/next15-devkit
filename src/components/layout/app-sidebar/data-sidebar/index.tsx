@@ -2,8 +2,9 @@ import type { DataSidebar } from "@/types/app-sidebar";
 import {
   BookOpen,
   Bot,
+  ChartPieIcon,
+  CircleAlertIcon,
   GalleryVerticalEnd,
-  History,
   Settings2,
   Star,
 } from "lucide-react";
@@ -24,9 +25,14 @@ export const dataTeams = [
 
 export const dataSidebar: DataSidebar[] = [
   {
-    title: "History",
-    icon: History,
-    url: "#",
+    title: "Examples",
+    url: "/app/examples",
+    icon: ChartPieIcon,
+  },
+  {
+    title: "404",
+    url: "/app/404",
+    icon: CircleAlertIcon,
   },
   {
     title: "Starred",

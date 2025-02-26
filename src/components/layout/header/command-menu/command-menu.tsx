@@ -11,7 +11,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from "nextjs-toploader/app";
 import React from "react";
-import { dataSidebar } from "../../app-sidebar/data";
+import { dataSidebar } from "../../app-sidebar/data-sidebar";
 import CommandThemeGroup from "./command-theme";
 
 export function CommandMenu() {

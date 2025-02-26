@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { dataSidebar } from "./data";
+import { dataSidebar } from "./data-sidebar";
 import CollapsibleSidebarItem from "./nav-collapsible";
 
 export function NavMain() {

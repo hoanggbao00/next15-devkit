@@ -1,5 +1,5 @@
+import { NotFound } from "@/assets/icons";
 import { buttonVariants } from "@/components/ui/button";
-import { NotFound } from "@/components/ui/icons";
 import type { Metadata } from "next";
 import Link from "next/link";
 

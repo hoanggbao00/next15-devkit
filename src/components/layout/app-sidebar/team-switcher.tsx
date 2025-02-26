@@ -18,7 +18,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { dataTeams } from "./data";
+import { dataTeams } from "./data-sidebar";
 
 export function TeamSwitcher() {
   const { isMobile } = useSidebar();

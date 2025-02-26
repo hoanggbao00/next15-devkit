@@ -36,6 +36,9 @@
         "useValidAnchor": "off",
         "useButtonType": "off",
         "useFocusableInteractive": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off"
       }
     }
   }
