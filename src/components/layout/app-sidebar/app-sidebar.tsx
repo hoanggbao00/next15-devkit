@@ -39,7 +39,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
         <NavMain />
       </SidebarContent>
       <SidebarFooter>
-        {flags === "header1" && <ThemeSwitcherSidebar />}
+        {flags !== "header2" && <ThemeSwitcherSidebar />}
         <NavUser />
       </SidebarFooter>
       <SidebarRail />

@@ -94,14 +94,25 @@ Enjoy coding! 🚀
 ---
 ## Sreenshots
 
-**Light Mode**
-![light-mode](./screenshots/light-mode.png)
+**Header Style - Breadcrumb**
+![header-style-1](./screenshots/header-style-1.png)
 
-**Dark Mode**
-![dark-mode](./screenshots/dark-mode.png)
+**Header Style - Search**
+![header-style-2](./screenshots/header-style-2.png)
+**Header Style - Search (Open Command Palette)**
+![header-style-2-open](./screenshots/header-style-2-open.png)
+
+**Confirm with Promise**
+![confirm-promise](./screenshots/confirm-promise.png)
 
 **Collapsed Sidebar**
-![collapsed-sidebar](./screenshots/collapsed-sidebar.png)
+![sidebar-collapsed](./screenshots/sidebar-collapsed.png)
 
-**Sidebar Mobile open with Sheet**
-![sidebar-mobile-open](./screenshots/sidebar-mobile-witth-sheet.png)
+**404 Page**
+![404-page](./screenshots/404-page.png)
+
+**Landing Page**
+![landing-page](./screenshots/landing-page.png)
+
+---
+Enjoy coding! 🚀
